@@ -10,11 +10,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 border-bottom fixed-top">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <header id="Home">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 border-bottom fixed-top">
                 <div class="container-fluid">
                     <a class="navbar-brand fs-2" href="#">TeChNo- <span class="text-primary">WeB</span></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,27 +28,27 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5 text-center">
                             <li class="nav-item">
-                                <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active text-primary" aria-current="page" href="#Home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="#About">About</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Services
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Graphic Design</a></li>
-                                    <li><a class="dropdown-item" href="#">Web Design</a></li>
+                                    <li><a class="dropdown-item" href="#Services">Graphic Design</a></li>
+                                    <li><a class="dropdown-item" href="#Services">Web Design</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#Services">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Our Team</a>
+                                <a class="nav-link" href="#Team">Our Team</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="#Contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -93,18 +98,18 @@
 
         <!-- ABOUT SECTION  -->
 
-        <section class="about my-5">
+        <section class="about my-5" id="About">
             <div class="container"> <!--container -->
                 <div class="text-center my-5">
-                    <h1>About <span class="text-primary">me</span></h1>
+                    <h1 data-aos="fade-down">About <span class="text-primary">me</span></h1>
                     <hr class="m-auto w-25">
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 col-12 col-md-6 bg-dark">
-                        <h1 class="text-white">What do you <span class="text-primary">what to know?</span></h1>
-                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus debitis soluta quis tenetur similique dolores nostrum maxime voluptatibus exercitationem qui placeat officia nemo ipsam magnam, quo, accusamus dolor eveniet! Sed?</p>                        
-                        <button type="button" class="btn btn-light mb-5">More About me</button>
-                        <div class="accordion" id="accordionExample">
+                    <div class="col-sm-12 col-12 col-md-6" data-aos-offset="200" data-aos="zoom-in">
+                        <h1>What do you <span class="text-primary">what to know?</span></h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus debitis soluta quis tenetur similique dolores nostrum maxime voluptatibus exercitationem qui placeat officia nemo ipsam magnam, quo, accusamus dolor eveniet! Sed?</p>                        
+                        <button type="button" class="btn bg-primary text-light mb-5">More About me</button>
+                        <div class="accordion" id="accordionExample" data-aos="zoom-in">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -144,7 +149,7 @@
                         </div>
                     </div>
 
-                    <div class="about-img col-sm-12 col-12 col-md-6 bg-success m-auto text-md-end text-center mt-4 mt-md-0">
+                    <div class="about-img col-sm-12 col-12 col-md-6 m-auto text-md-end text-center mt-4 mt-md-0" data-aos-offset="200" data-aos="fade-right">
                         <div>
                             <img src="images/s4.jpg" alt="Wanted" class="img-fluid img-thumbnail">
                         </div>                        
@@ -154,14 +159,14 @@
         </section>
 
         <!-- SERVICES SECTION  -->
-         <section class="services py-5 bg-danger">
+         <section class="services py-5" id="Services"> 
             <div class="container">
                 <div class="text-center my-5">
                     <h1>Our<span class="text-primary">Services</span></h1>
                     <hr class="m-auto w-25">
                 </div>
-                <div class="row">
-                    <div class="col-sm-12 col-12 col-md-4 bg-success d-flex">
+                <div class="row" data-aos-offset="200" data-aos="zoom-in-up">
+                    <div class="col-sm-12 col-12 col-md-4 d-flex">
                         <div class="card h-100">
                             <div class="card-body">
                                 <i class="bi bi-code-slash bg-primary text-white rounded p-2"></i>
@@ -171,7 +176,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-12 col-md-4 bg-primary d-flex mt-4 mt-md-0">
+                    <div class="col-sm-12 col-12 col-md-4 d-flex mt-4 mt-md-0">
                          <div class="card bg-primary h-100">
                             <div class="card-body">
                                 <i class="bi bi-app bg-white text-dark rounded p-2"></i>
@@ -181,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-12 col-md-4 bg-light d-flex mt-4 mt-md-0">
+                    <div class="col-sm-12 col-12 col-md-4 d-flex mt-4 mt-md-0">
                         <div class="card h-100">
                             <div class="card-body">
                                 <i class="bi bi-motherboard bg-primary text-white rounded p-2"></i>
@@ -193,8 +198,8 @@
                     </div>
                 </div>
 
-                <div class="row mt-5">
-                    <div class="col-sm-12 col-12 col-md-4 bg-success d-flex">
+                <div class="row mt-5" data-aos-offset="200" data-aos="zoom-in-down">
+                    <div class="col-sm-12 col-12 col-md-4 d-flex">
                         <div class="card h-100">
                             <div class="card-body">
                                 <i class="bi bi-cloud bg-primary text-white rounded p-2"></i>
@@ -204,7 +209,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-12 col-md-4 bg-primary d-flex mt-4 mt-md-0">
+                    <div class="col-sm-12 col-12 col-md-4 d-flex mt-4 mt-md-0">
                          <div class="card bg-primary h-100">
                             <div class="card-body">
                                 <i class="bi bi-shield-check bg-white text-dark rounded p-2"></i>
@@ -214,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-12 col-md-4 bg-light d-flex mt-4 mt-md-0">
+                    <div class="col-sm-12 col-12 col-md-4 d-flex mt-4 mt-md-0">
                         <div class="card h-100">
                             <div class="card-body">
                                 <i class="bi bi-check-all bg-primary text-white rounded p-2"></i>
@@ -229,14 +234,14 @@
          </section>
 
          <!-- TEAMS SECTION  -->
-        <section class="team py-5 bg-success">
+        <section class="team py-5" id="Team">
             <div class="container">
                 <div class="text-center my-5">
                     <h1>Our <span class="text-primary">Team</span></h1>
                     <hr class="m-auto w-25">
                 </div>
                 <div class="row text-center">
-                    <div class="col-sm-12 col-12 col-md-4 text-center">
+                    <div class="col-sm-12 col-12 col-md-4 text-center" data-aos-offset="200" data-aos="zoom-in-right">
                         <div class="card">
                             <div class="card-body">
                                 <img src="images/My_Photo.jpg" alt="" class="team-img rounded-circle border border-primary p-2">
@@ -246,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-12 col-md-4 text-center mt-4 mt-md-0">
+                    <div class="col-sm-12 col-12 col-md-4 text-center mt-4 mt-md-0" data-aos-offset="200" data-aos="zoom-in">
                         <div class="card">
                             <div class="card-body">
                                 <img src="images/s4.jpg" alt="" class="team-img rounded-circle border border-primary p-2">
@@ -256,7 +261,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-12 col-md-4 text-center mt-4 mt-md-0">
+                    <div class="col-sm-12 col-12 col-md-4 text-center mt-4 mt-md-0" data-aos-offset="200" data-aos="zoom-in-left">
                         <div class="card">
                             <div class="card-body">
                                 <img src="images/s6.jpg" alt="" class="team-img rounded-circle border border-primary p-2">
@@ -271,14 +276,14 @@
         </section>
 
         <!-- SECTION FOOTER CONTACT  -->
-        <section class="footer py-5 text-center bg-light">
+        <section class="footer py-5 text-center bg-light" id="Contact">
             <div class="container">
                 <div class="text-center my-5">
                     <h1>Feel free to <span class="text-primary">Contact</span></h1>
                     <hr class="m-auto w-25">
                 </div>
                 <div class="row text-start">
-                    <div class="col-sm-12 col-12 col-md-6">
+                    <div class="col-sm-12 col-12 col-md-6" data-aos="fade-up-right">
                         <form class="row g-3">
                             <div class="col-md-6">
                                 <label for="inputEmail4" class="form-label">Email</label>
@@ -320,7 +325,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-12 col-12 col-md-6 m-auto text-md-end text-center mt-4 mt-md-0">
+                    <div class="col-sm-12 col-12 col-md-6 m-auto text-md-end text-center mt-4 mt-md-0" data-aos="fade-up-left">
                         <div>
                             <img src="images/s4.jpg" alt="Wanted" class="img-fluid img-thumbnail">
                         </div>  

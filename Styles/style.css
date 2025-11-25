@@ -1,5 +1,7 @@
 
-
+html, body {
+  overflow-x: hidden;
+}
 body h1{
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
